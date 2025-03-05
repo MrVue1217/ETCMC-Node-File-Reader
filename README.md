@@ -14,6 +14,8 @@ psutil
 
 Server.py can be added to a main PC\NAS that can host
 Client.py will be added to the Node PC
+Client.py will post to server of updates every 5 minutes. This can be change. 
+(time.sleep(300)  # Wait for 5 minutes)
 
 Installation
 
@@ -21,12 +23,12 @@ Installation
 2. Install Flask using Windows Powershell (pip install Flask)
 3. Install psutil (pip install psutil)
 
-Once Python and Add-on are install, prepare the cleint.py file to be monitor.
+Once Python and Add-on are install, prepare the client.py file to be monitor.
 
 ETCMC installation
 Edit the below items in the client.py file
 
- - (file_path = r'C:\Program Files (x86)\ETCMC\ETCMC Client\write_only_etcpow_balance.txt') # ETCMC File path (somewill be different)
+ - (file_path = r'C:\Program Files (x86)\ETCMC\ETCMC Client\write_only_etcpow_balance.txt') # ETCMC File path (default path)
  - SERVER_URL = 'http://localhost:8055/add_device' # your host PC
  - DEVICE_ID = 'Node01'  # Unique identifier for each device
 
