@@ -12,10 +12,10 @@ psutil
 
 2 files (server.py and client.py)
 
-Server.py can be added to a main PC\NAS that can host
-Client.py will be added to the Node PC
-Client.py will post to server of updates every 5 minutes. This can be change. 
-(time.sleep(300)  # Wait for 5 minutes)
+- Server.py can be added to a main PC\NAS that can host
+- Client.py will be added to the Node PC
+- Client.py will post to server of updates every 5 minutes. This can be change. 
+  - (time.sleep(300)  # Wait for 5 minutes)
 
 Installation
 
@@ -40,8 +40,8 @@ Once all shared folder has been added. You can customize the dashboard looks, co
 
 1. Open up a powershell window and navigate to the dirctory of the python script (app.py)
    example:
-     - cd desktop\dashboard\
-     - enter: python app.py
+     - cd desktop\dashboard\ #path to your server.py file
+     - enter: python server.py
 
    You pythion script should execute and should be accessible on the IP address (http://localhost:8055/add_device)
  ![image](https://github.com/user-attachments/assets/218efd90-5ae3-4914-b9e7-42cf47051c8a)
