@@ -71,4 +71,4 @@ def devices_table():
     return render_template_string(html, devices=devices)
 
 if __name__ == '__main__':
-    app.run(host='10.10.15.62', port=8055)
+    app.run(host='localhost', port=8055)
