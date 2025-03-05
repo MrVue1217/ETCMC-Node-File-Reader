@@ -1,52 +1,48 @@
 ETCMC File reader using Python
 
-![image](https://github.com/user-attachments/assets/d42d574b-319b-407f-a56c-6429cdf46f02)
-
-
+![image](https://github.com/user-attachments/assets/57964875-60f3-4d30-8691-a439a25f47a1)
 
 Required
 Windows 10 or higher
 Python 3
 
 Add-Ons
-Dash
-Pandas
+Flask
+psutil
+
+2 files (server.py and client.py)
+
+Server.py can be added to a main PC\NAS that can host
+Client.py will be added to the Node PC
 
 Installation
 
 1. Install Python 3
-2. Install Dash using Windows Powershell (pip install dash)
-3. Install Pandas (pip install pandas)
+2. Install Flask using Windows Powershell (pip install Flask)
+3. Install psutil (pip install psutil)
 
-Once Python and Add-on are install, prepare the sharing folders to be monitor.
+Once Python and Add-on are install, prepare the cleint.py file to be monitor.
 
-Under ETCMC installation folder path (C:\Program Files\ETCMC\ETCMC Client)
+ETCMC installation
+Edit the below items in the client.py file
 
-Share the ETCMC Folder within your local network sharing (ETCMC Client)
-![image](https://github.com/user-attachments/assets/e896b4f9-38e2-40a4-8322-cab2f8820514)
-
-Do this for all ETCMC Nodes you have
-
- Once all folders are shared on the local network, prepare your python script.
-
- Edit the path here:
- {'path': r'\\10.10.15.210\ETCMC Client', 'file': 'write_only_etcpow_balance.txt', 'node': 'ETCMC Node 01'},
+ - (file_path = r'C:\Program Files (x86)\ETCMC\ETCMC Client\write_only_etcpow_balance.txt') # ETCMC File path (somewill be different)
+ - SERVER_URL = 'http://localhost:8055/add_device' # your host PC
+ - DEVICE_ID = 'Node01'  # Unique identifier for each device
 
 This is the file that will be read by the python script
-(Don not change or update this file.)
+(Do not change or update this file.)
 'write_only_etcpow_balance.txt'
 
 Once all shared folder has been added. You can customize the dashboard looks, color, column names, etc.
 
 1. Open up a powershell window and navigate to the dirctory of the python script (app.py)
    example:
-     cd desktop\dashboard\
-   ![image](https://github.com/user-attachments/assets/e62f1cc0-f763-4bc4-aa59-246c698dbc78)
+     - cd desktop\dashboard\
+     - enter: python app.py
 
+   You pythion script should execute and should be accessible on the IP address (http://localhost:8055/add_device)
+ ![image](https://github.com/user-attachments/assets/218efd90-5ae3-4914-b9e7-42cf47051c8a)
 
-   enter: python app.py
-
-   You pythion script should execute and should be accessible on the IP address
-   ![image](https://github.com/user-attachments/assets/d02b9051-5607-48b7-8689-6e67954a31e6)
 
    
